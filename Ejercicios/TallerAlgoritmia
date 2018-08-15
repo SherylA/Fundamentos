@@ -1,0 +1,66 @@
+Taller de Algoritmia 
+
+1.2. Hacer un algoritmo tal que dado N números, calcule y escriba la suma de los pares y el producto de los impares.
+
+Versión 1
+
+1. Lib Math
+2. Define N, i como un entero
+3. Define numeros, suma, producto
+4. suma=0; producto=1
+5. Imprimir “¿Cuántos número son?”
+6. Leer N
+7. Si N<0
+8.   Imprimir “El numero no puede ser negativo”
+9. Sino  
+10.  Para i =0 hasta N paso 1 
+11.    Imprimir “Ingrese el número ”, i+1
+12.      Leer numero
+13.    Si numero==piso(numero)
+14.      Si (numero/2)==piso(numero/2)
+15.         suma += numero // suma = suma + numero
+16.      Sino
+17.         producto *= numero // producto = producto*numero
+18.      FinSi
+19.    Sino
+20.      Imprimir “No es un número entero, no se tiene en cuenta”
+21.    FinSi
+22.  FinPara
+23. FinSi
+
+1.3.  Construya un algoritmo que permita leer una cantidad variable de números N, indicando finalmente lo siguiente:
+
+Cuántos números fueron positivos.
+Cuántos fueron negativos
+Cuantos fueron pares
+Cuantos fueron impares
+Cuántos fueron múltiplos de 8.
+
+1. Lib Math
+2. Define N, i, cont_pos, cont_neg, cont_pares, cont_impares, cont_mul8 como un entero
+3. Define numeros
+4. Imprimir “¿Cuántos número son?”
+5. Leer N
+6. Si N<0
+7.   Imprimir “El numero no puede ser negativo”
+8. Sino  
+9.   Para i =0 hasta N paso 1 
+10.   Imprimir “Ingrese el número ”, i+1
+11.   Leer numero
+12.   Si numero >=0
+13.     cont_pos +=1
+14.   Sino
+15     cont_neg +=1
+16.   FinSi
+16.   Si numero==piso(numero)
+17.    Si (numero/2)==piso(numero/2)
+18.         cont_pares += 1 // = cont_pares++
+19.    Sino
+20.         cont_impares +=1  // producto = producto*numero
+21.    FinSi
+22.   FinSi
+23.   Si (numero/8)==piso(numero/8)
+24.    cont_mul8 +=1
+25.   FinSi
+26.  FinPara
+27.FinSi
