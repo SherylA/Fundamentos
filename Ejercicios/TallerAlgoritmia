@@ -64,3 +64,54 @@ Cuántos fueron múltiplos de 8.
 25.   FinSi
 26.  FinPara
 27.FinSi
+
+1.8 Un año es bisiesto si es múltiplo de 4, exceptuando los múltiplos de 100, que sólo son bisiestos cuando son 
+múltiplos además de 400, por ejemplo, el año 1900 no fue bisiesto, pero el año 2000 si lo fue. Hacer 
+un algoritmo que dado un año A nos diga si es o no bisiesto.
+
+1. Lib Math
+2. Define year   
+3. Imprimir "Ingrese el año"
+4. Leer year
+5. year = piso(year)
+6. Si year > 0
+7.   Si (year/4)==piso(year/4)
+8.      Si (year/100)==piso(year/100) 
+9          Si (year/400)==piso(year/400)
+9.           Imprimir "Es bisiesto"
+10.        Sino 
+11.          Imprimir "No es bisiesto"
+12.        FinSi
+13.      Sino
+14.         Imprimir "Es bisiesto"
+15.     FinSi
+16.  Sino
+17.       Imprimir "No es bisiesto"
+18.  FinSi
+
+2.2. Realice un Algoritmo que permita dar como salida la población de dos países (a y b), 
+teniendo en cuenta para tal propósito lo siguiente:
+
+En el primer año el país “a” tiene menos población que el país “b”.
+
+Las tasas de crecimiento de los países “a” y “b” son de 6% y 3% anuales respectivamente.
+
+Se debe dar como salidas las poblaciones desde el segundo año hasta que la población de “a” 
+exceda a la población de “b”, además la cantidad de años que transcurrieron para que esto sucediera.
+
+1. Lib Math
+2. Define pobA, pobB, years como enteros
+3. Imprimir "Ingrese la población de ambos países A y B"
+4. Leer pobA, pobB
+5. Si pobA>0 y pobB>0 y pobA<pobB
+6.  years=1
+7.    Mientras (pobA<pobB)
+8.       pobA *=1.06
+9.       pobB *=1.03
+10.      years +=1
+11.      Imprimir "Para el año ", years,"la población de A es",pobA,"y la de B es",pobB
+12.   FinMientras 
+13.  Imprimir "El país A superó en población al país B en", years," años."
+14.Sino
+15. Imprimir "Hay un error en los datos"
+16.FinSi
