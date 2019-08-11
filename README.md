@@ -1,2 +1,2 @@
 # Fundamentos
-Repositorio con códigos, información y demás sobre la materia fundamentos de comutación de la Universidad de Antioquia
+Repositorio con códigos, información y demás sobre la materia fundamentos en computación de la Universidad de Antioquia

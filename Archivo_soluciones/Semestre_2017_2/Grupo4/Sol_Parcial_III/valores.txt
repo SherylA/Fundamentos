@@ -1,0 +1,6 @@
+Los valores importantes del experimento son:
+La gravedad 9.84 [m/s^2] 
+La posición inicial en x es 0.01 [m] 
+La altura inicial es 5.29 [m] 
+El ángulo de disparo es 78.96 grados 
+La magnitud de la velocidad inicial es 10.28 [m/s]

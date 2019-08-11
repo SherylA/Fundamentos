@@ -1,0 +1,49 @@
+Realice un algoritmo que encuentre la interjección entre dos rectas ingresando los valores de dos puntos si se da el caso.
+
+Entradas x1A,y1A,x2A,y2A,x1B,y1B,x2B,y2B
+Salidas xp,yp
+1.  Cargar lib math
+2.  Imprimir "Este programa calcula la intercepción entre dos rectas recibiendo dos puntos por cada una"
+3.	Imprimir "Ingrese el punto 1 de la recta A de la forma (x,y): "
+4.	Leer x1A,y1A
+5.	Imprimir "Ingrese el punto 2 de la recta A de la forma (x,y): "
+6.	Leer x2A,y2A
+7.	Imprimir "Ingrese el punto 1 de la recta B de la forma (x,y): "
+8.	Leer x1B,y1B
+9.	Imprimir "Ingrese el punto 2 de la recta B de la forma (x,y): "
+10.	Leer x2B,y2B
+11.	dxA=x2A-x1A
+12.	dxB=x2B-x1B
+13.	dyA=y2A-y1A
+14.	dyB=y2B-y1B
+15.	Si dxA!=0 y dxB!=0
+16.	    mA=dyA/dxA
+17.		mB=dyB/dxB
+18.		bA=mA*x1A-y1A
+19.		bB=mb*x1B-y1B
+20.  	Si mA==mB
+21.			Imprimir "Las rectas son paralelas, no se interceptan"
+22.		SiNo
+23.			xp=(bB-bA)/(mA-mB)
+24.			yp=mA*xp+bA
+25.			Imprimir "El punto de intercepción es x=",xp," y=",yp
+26.		FinSi
+27.	SiNo
+28.		Si dxA==0.0
+29.			mB=dyB/dxB
+30.			bB=mb*x1B-y1B
+31.			xp=x1A
+32.			yp=mB*xp+bB
+33.			Imprimir "El punto de intercepción es x=",xp," y=",yp
+34.		SiNo
+35.			Si dxB==0.0
+36.				mA=dyA/dxA
+37.				bA=mA*x1A-y1A
+38.				xp=x1B
+39.				yp=mA*xp+bA
+40.				Imprimir "El punto de intercepción es x=",xp," y=",yp
+41.			SiNo
+42.				Imprimir "Las rectas son paralelas, no se interceptan" 
+43.			FinSi
+44.		FinSi
+45.	FinSi

@@ -1,0 +1,34 @@
+Diseñar el algoritmo que calcule el área y el perímetro de un triángulo rectángulo dada la base y la altura.
+
+Entrada: base, altura
+Salida: área y perímetro
+1.  Cargar la lib math
+2.  Imprimir "Este programa determina el área y el perímetro de un triangulo rectángulo dada la base y la altura."
+3.  Imprimir "Por favor introducir el valor de la base y la altura en metros"
+4.  Leer base, altura
+5.  Si base<=0 o altura<=0
+6.      Imprimir "Datos incorrectos. Volver a ejecutar el programa"
+7.  Sino
+8.	    area=base*altura*0.5
+9.		Imprimir "¿La base es?: 1. Un cateto 2. La hipotenusa"
+10.		Leer op
+11.		Si op==1
+12.			perimetro=base+altura+(altura^2+base^2)^(1.0/2.0)
+13.		SiNo
+14.			Si op==2
+15.             Si 2*altura>base
+16.                  Imprimir "Revise el problema. La altura no puede ser mayor que la mitad de la base"
+17.             Sino				
+18.                 beta=0.5*asen(2*altura/base)
+19.				    alpha=pi*0.5-beta
+20.				    L1=altura*(1.0/sen(alpha))
+21.				    L2=altura*(1.0/sen(beta))
+22.				    perimetro=base+L1+L2
+23.                FinSI
+24.			SiNo
+25.				Imprimir "Opción incorrecta"
+26.			FinSi
+27.		FinSi
+28.		Imprimir "El área del triángulo es igual a ",área," metros^2 y su perímetro es ",perimetro," metros"
+29.	FinSi
+

@@ -1,0 +1,125 @@
+Escribe un algoritmo para leer un conjunto de N números y calcule la media, la
+moda, la mediana, el rango, la varianza, la desviación estándar
+
+Entradas: N,list[N]
+Salidas: a media, la moda, la mediana, el rango, la varianza, la desviación estándar
+1.  Cargar lib math
+2.  Cargar funciones media(),moda(),mediana(),maximo(),varianza(),desviacion()
+3.  Imprimir "Este programa calcula la  media, la moda, la mediana, el rango, la varianza, la desviación estándar." 
+4.  Imprimir "Por favor introduzca el valor del conjunto de datos"
+5.  Leer N
+6.  Si N<=1 o N -trunc(N)!=0
+7.		Imprimir "Error en número de dados. Volver a ejecutar el programa"
+8.	Sino
+9.		Lista list[N]
+10.		Imprimir "Introduzca los valores: "
+11.		Para i desde 1 hasta N
+12.			Leer list[i]
+13.		FinPara
+14.		Imprimir "La media es: ",media(list,N)
+15.		Imprimir "La moda es: ",moda(list,N)
+16.		Imprimir "La mediana es: ",mediana(list,N)
+17.		Imprimir "El rango es: ",maximo(list,N)-minimo(list,N)
+18.		Imprimir "La varianza es: ",varianza(list,N)
+19.		Imprimir "La desviación es: ",desviacion(list,N)
+20.	FinSi
+	
+#####Funciones####
+
+Funcion med=media(list,N)
+	suma=0
+	Para i desde 1 hasta N
+		suma=suma+list[i]
+	FinPara
+	med=suma/N
+FinFuncion
+
+Funcion var=varianza(list,N)
+	suma=0
+	med=media(list,N)
+	Para i desde 1 hasta N
+		suma=suma+(list[i]-med)^2
+	FinPara
+	var=suma/N
+FinFuncion
+
+Funcion des=desviacion(list,N)
+	var=varianza(list,N)
+	des=raiz(var)
+FinFuncion
+
+Funcion max=maximo(list,N)
+	max=-9999
+	Para i desde 1 hasta N
+		Si max>list[i]
+			max=max
+		Sino
+			max=list[i]
+		FinSi
+	FinPara
+FinFuncion
+
+Funcion min=minimo(list,N)
+	min=9999
+	Para i desde 1 hasta N
+		Si min<list[i]
+			min=min
+		Sino
+			min=list[i]
+		FinSi
+	FinPara
+FinFuncion
+
+Funcion frec=moda(list,N)
+	Lista f[N]
+	Para i desde 1 hasta N
+		f[i]=0
+		Para j desde 1 hasta N
+			Si list[i]==list[j]
+				f[i]=f[i]+1
+			FinSi
+		FinPara
+	FinPara
+	max=0
+	cont=0
+	para i desde 1 hasta N
+		Si max>f[i]
+			max=max
+		Sino
+			Si max<f[i]
+				max=f[i]
+				cont=i
+			Sino
+				Si list[i]>list[cont]
+					cont=i
+				FinSi
+			FinSi
+		FinSi
+	FinPara
+	frec=list[cont]
+FinFuncion
+
+Funcion median=mediana(list,N)
+	Lista list2[N]
+	d=1
+	Para i desde 1 hasta N
+		list2[i]=list[i]
+	Finpara
+	Para i desde 1 hasta N
+		Para j desde 1 hasta N-i
+			Si list2[j]>list2[j+1]
+				temp=list2[j]
+				list2[j]=list2[j+1]
+				list2[j+1]=temp
+			FinSi
+		FinPara
+	FinPara
+	
+	Si N/2!=truncar(N/2)
+		median=list2[trunc(N/2)+1]
+	Sino
+		median=0.5*(list2[trunc(N/2)]+list2[trunc(N/2)+1])
+	FinSi
+FinFuncion
+
+
