@@ -20,6 +20,10 @@ Repositorio con códigos, información y demás sobre la materia Fundamentos en 
 * Uso básico de python en problemas básicos en ciencia
 * Uso de básico de numpy, matplotlib y pandas
 
+## Notebooks
+
+* [Hablando en Binario](/Notebooks/Binary.ipynb)
+
 ## Autor
 
 Profesora Sheryl Avendaño 
