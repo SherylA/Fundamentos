@@ -12,7 +12,7 @@ Repositorio con códigos, información y demás sobre la materia Fundamentos en 
 
 ## Temario
 
-* Introdución a GNU/Linux
+* Introducción a GNU/Linux
 * Uso de algunos comandos de BASH
 * Introducción a la Algoritmia
 * Resolución de problemas básicos en ciencia usando algoritmia
@@ -21,7 +21,9 @@ Repositorio con códigos, información y demás sobre la materia Fundamentos en 
 * Uso de básico de numpy, matplotlib y pandas
 
 ## Notebooks
-
+<div class="alert alert-block alert-info">
+Para una mejor visualización cuando ingrese al archivo revise en la parte superior derecha, allí hay un símbolo **un circulo con un guión en el medio**, si posa en puntero del mouse aparecerá un letrero "Limited rendering only, external view available with nbviewer", donde la última parte está resaltada en azul, es un link que lo llevara a un entorno donde podrá ver mejor el notebook.
+</div>
 * [Hablando en Binario](/Notebooks/Binary.ipynb)
 
 ## Autor
