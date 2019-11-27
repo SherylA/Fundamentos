@@ -4,27 +4,23 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 #Estas importaciones son para poder escribir letras griegas y tildes el las gráficas
-from matplotlib import rcParams
-rcParams['text.latex.unicode']=True
 
 #Esta es para animaciones
 import matplotlib.animation as animation
 
-#Ahora una animación sencilla de la función seno
-#x=ang  y=r*sin(ang)
 R=10
-def data_gen(theta=0,r=R):
+def data_gen(t=0,r=R):
 	contador = 0
 	while contador < 101:
 		contador += 1
-		yield theta, r*m.sin(theta) 
-		theta += 0.02*m.pi
+		yield t, 8*t-t**2*9.8  
+		t += 0.02
 
 #Aquí inicializamos el plano de la imagen de un ymin a ymax y de xmin a xmax
 x1=0
-x2=2.1*m.pi
-y1=-1.1*R
-y2=1.1*R
+x2=1
+y1=0
+y2=2
 def init(xmin=x1,xmax=x2,ymin=y1,ymax=y2):
 	ax.set_ylim(ymin,ymax)
 	ax.set_xlim(xmin,xmax)
@@ -35,7 +31,7 @@ def init(xmin=x1,xmax=x2,ymin=y1,ymax=y2):
 
 #Luego creamos el entorno y la grid
 fig3, ax = plt.subplots()
-line, = ax.plot([], [], lw=2)
+line, = ax.plot([], [], linestyle="--",marker="o")
 ax.grid()
 xdata, ydata = [], []
 
@@ -43,14 +39,9 @@ xdata, ydata = [], []
 def run(data):
     # update the data
     t, y = data
-    xdata=t
-    ydata=y*4
+    xdata.append(t)
+    ydata.append(y)
     xmin, xmax = ax.get_xlim()
-	#Aquí se puede aumentar los limites de la gráfica pero como vamos hasta 
-	#la altura máxima y el alcance no es necesario
-    #if t >= xmax:
-    #    ax.set_xlim(xmin, 2*xmax)
-    #    ax.figure.canvas.draw()
     line.set_data(xdata, ydata)
     return line,
 
