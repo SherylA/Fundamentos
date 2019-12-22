@@ -7,8 +7,9 @@ Repositorio con códigos, información y demás sobre la materia Fundamentos en 
 * **Plantel educativo**: Instituto de Física, Universidad de Antioquia
 * **Docente**: Sheryl Avendaño
 * **Nivel**: Primer semestre
-* **Años**: 2016-2018
+* **Años**: 2016-2019
 * **Página oficial**: [UdeA](http://www.udea.edu.co/wps/portal/udea/web/inicio/institucional/unidades-academicas/facultades/ciencias-exactas-naturales/institutos/instituto-fisica) 
+* **Introducción**: [Link](https://my.visme.co/projects/9079pk78-fc-intro-2)
 
 ## Temario
 
